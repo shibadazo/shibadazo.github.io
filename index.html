@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title></title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
+    {% comment %} <body>
+        <!-- シーン -->
+        <a-scene>
+        <!-- アセット -->
+        <a-assets>
+            <!-- 3Dモデルデータ -->
+            <a-asset-item id="cow-obj" src="../assets/obj/spot_quadrangulated.obj"></a-asset-item>
+            <!-- マテリアルデータ -->
+            <a-asset-item id="cow-mtl" src="../assets/obj/spot_quadrangulated.mtl"></a-asset-item>
+            <!-- 全天球画像 -->
+            <img id="sky" src="../assets/images/puydesancy.jpg">
+        </a-assets>
+
+        <!-- 3Dモデル -->
+        <a-entity obj-model="obj: #cow-obj; mtl: #cow-mtl" position="0 1 -2" rotation="0 180 0">
+            <a-animation
+            attribute="rotation"
+            dur="5000"
+            to="0 540 0"
+            repeat="indefinite"></a-animation>
+        </a-entity>
+
+        <!-- 全天球背景 -->
+        <a-sky src="#sky" rotation="0 -130 0"></a-sky>
+        </a-scene>
+    </body> {% endcomment %}
+    <body>
+        <a-scene id="scene" background="color:#000000">
+        <a-sky src="wo0qmas-360-virtual-tour-miami-bayside.jpeg"></a-sky>
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
+        </a-scene>
+    </body>
+</html>
+
